@@ -7,8 +7,8 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-
+  build-test:
+  
     runs-on: ubuntu-latest
 
     steps:
@@ -21,3 +21,5 @@ jobs:
       run: make check
     - name: make distcheck
       run: make distcheck
+    - name: test
+      run: ./Tester
